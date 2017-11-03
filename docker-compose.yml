@@ -21,7 +21,7 @@ services:
     - "49160:22"
     - "49161:80"
   mongodb:
-#    restart: always
+    restart: always
     image: bitnami/mongodb:latest
     ports:
     - "27017:27017"    
