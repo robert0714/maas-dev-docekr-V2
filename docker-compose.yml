@@ -1,0 +1,34 @@
+version: '2'
+
+services:
+  mysqldb:
+#    restart: always
+    image: mysql/mysql-server:5.7.20-1.1.2
+    volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+    - $PWD/data/mysql:/var/lib/mysql
+    - $PWD/my55.cnf:/etc/my.cnf
+    - $PWD/temp_my.cnf.j2:/.my.cnf
+    environment:
+    - MYSQL_ROOT_PASSWORD=qazwsx
+    - MYSQL_DATABASE=ec
+    - MYSQL_USER=ecuser
+    - MYSQL_PASSWORD=qazwsx
+    - EXTRA_OPTS="--lower_case_table_names=1"
+    - TZ=Asia/Taipei
+    ports: 
+    - "3306:3306"
+    - "49160:22"
+    - "49161:80"
+  mongodb:
+#    restart: always
+    image: bitnami/mongodb:latest
+    ports:
+    - "27017:27017"    
+    volumes:
+    - $PWD/data/mongodb:/bitnami/mongodb
+    environment:
+    - MONGODB_DATABASE=ec
+
+   
+
