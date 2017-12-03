@@ -22,11 +22,11 @@ services:
     - "49161:80"
   mongodb:
     restart: always
-    image: bitnami/mongodb:latest
+    image: mongo:latest
     ports:
     - "27017:27017"    
     volumes:
-    - $PWD/data/mongodb:/bitnami/mongodb
+    - $PWD/data/mongodb:/data/db
     environment:
     - MONGODB_DATABASE=ec
 
