@@ -2,6 +2,7 @@ version: '2'
 
 services:
   mysqldb:
+    container_name: mysql
 #    restart: always
     image: mysql/mysql-server:5.7.20-1.1.2
     volumes:
@@ -21,6 +22,7 @@ services:
     - "49160:22"
     - "49161:80"
   mongodb:
+    container_name: robert-mongodb
     restart: always
     image: mongo:latest
     ports:
