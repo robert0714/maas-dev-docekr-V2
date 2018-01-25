@@ -1,5 +1,5 @@
 `
- maas-dev-docekr-V2]$ docker exec -it  maasdevdocekrv2_mysqldb_1 /bin/bash
+ maas-dev-docekr-V2]$ docker exec -it  mysql /bin/bash
  
  bash-4.2# mysql -uroot
 
