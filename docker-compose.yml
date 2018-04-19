@@ -4,7 +4,7 @@ services:
   mysqldb:
     container_name: mysql
 #    restart: always
-    image: mysql/mysql-server:5.7.20-1.1.2
+    image: mysql/mysql-server:5.7.22-1.1.5
     volumes:
     - /var/run/docker.sock:/var/run/docker.sock
     - $PWD/data/mysql:/var/lib/mysql
