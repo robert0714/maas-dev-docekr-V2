@@ -80,7 +80,10 @@ bind-address=0.0.0.0
 log-bin="COP00-bin"
 #
 # # Error Logging.
- log-error="COP00.err"
+# log-error="COP00.err"
+
+log-error=/var/log/mysqld.log
+
 #
 # # Server Id.
  server-id=150
