@@ -16,20 +16,20 @@ services:
     - MYSQL_PASSWORD=qazwsx
     - EXTRA_OPTS="--lower_case_table_names=1"
     - TZ=Asia/Taipei
-    ports: 
-    - "3306:3306"
-    - "49160:22"
-    - "49161:80"
+    network_mode:  "host"
+#   ports: 
+#   - "3306:3306"
+#   - "49160:22"
+#   - "49161:80"
   mongodb:
-    container_name: robert-mongodb
-    restart: always
+    container_name: mongodb
     image: mongo:latest
-    ports:
-    - "27017:27017"    
+#   ports:
+#   - "27017:27017"    
     volumes:
     - $PWD/data/mongodb:/data/db
     environment:
     - MONGODB_DATABASE=ec
-
+    network_mode:  "host"
    
 
