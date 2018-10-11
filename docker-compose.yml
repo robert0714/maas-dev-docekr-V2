@@ -30,6 +30,7 @@ services:
     - $PWD/data/mongodb:/data/db
     environment:
     - MONGODB_DATABASE=ec
+    - TZ=Asia/Taipei
     network_mode:  "host"
    
 
