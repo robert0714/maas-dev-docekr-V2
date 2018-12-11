@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+  sonarqube:
+    container_name: sonarqube
+    image: mysql/sonarqube:lts
+    volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+    - $PWD/sonarqube/conf:/opt/sonarqube/conf
+    - $PWD/sonarqube/data:/opt/sonarqube/data
+    - $PWD/sonarqube/logs:/opt/sonarqube/logs
+    - $PWD/sonarqube/extensions:/opt/sonarqube/extensions
+    environment:
+    - TZ=Asia/Taipei
+#    network_mode:  "host"
+    ports: 
+     - "9000:9000"  
+# mac系統無法使用network host   
