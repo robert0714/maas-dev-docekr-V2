@@ -50,7 +50,7 @@ services:
     - ENABLE_ORACLE_COMPATIBILITY=false
     - UPDATEAVAIL=NO
     - TO_CREATE_SAMPLEDB=false
-    - REPODB=false
+    - REPODB=true
     - IS_OSXFS=false
     - PERSISTENT_HOME=true
     - HADR_ENABLED=false
