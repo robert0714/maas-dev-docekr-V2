@@ -30,8 +30,8 @@ symbolic-links=0
 log-error=/var/log/mysqld.log
 pid-file=/var/run/mysqld/mysqld.pid
 lower_case_table_names=1
-character-set-server=utf8
-collation-server=utf8_general_ci
+character-set-server=utf8mb4
+collation-server=utf8mb4_unicode_ci
 
 #允許ssh外部連入mysql指令
 bind-address=0.0.0.0 
